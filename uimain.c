@@ -7,7 +7,7 @@ int main()
 
   while (1) { // Infinite while loop
 
-    fputs("Select which shape you want to print (Triangle = t, Square = s, Chars = c) or 'q' to quit\n> ", stdout);
+    fputs("Select which shape you want to print (Triangle = t, Square = s, Chars2 = m, arrow = a, Chars = c) or 'q' to quit\n> ", stdout);
     fflush(stdout);		/* stdout only flushes automatically on \n */
     int c;
     while ((c = getchar()) == '\n'); /* ignore newlines */
@@ -24,6 +24,14 @@ int main()
       puts("You selected square:");
       print_square(5, 5);
       break;
+    case 'a':
+      print_arrow(5,7,5);
+      break; 
+    case 'm':
+      for (char m = 'A'; m < 'D'; m++)
+      print_char_5x7('A');
+      break;
+
     case 'c':
       puts("You selected chars:");
       for (char c = 'A'; c < 'D'; c++)
